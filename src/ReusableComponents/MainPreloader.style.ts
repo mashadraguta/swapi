@@ -2,10 +2,9 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
   Container: {
-    width: "100%",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    gap: "100px",
   },
   Title: {
     color: "#ffffff",

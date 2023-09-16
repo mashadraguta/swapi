@@ -19,8 +19,10 @@ export const useStyles = makeStyles<IStyleProps>(() => ({
     "-moz-box-shadow": "10px 10px 5px 0px rgba(255,255,255,1)",
     boxShadow: "10px 10px 5px 0px rgba(255,255,255,1)",
     borderRadius: "10px",
-    minHeight: ({ variant }: any) => (variant === "small" ? "" : "500px"),
-    minWidth: ({ variant }: any) => (variant === "small" ? "" : "500px"),
+    maxHeight: ({ variant }: any) => (variant === "small" ? "400px" : "500px"),
+    maxWidth: ({ variant }: any) => (variant === "small" ? "400px" : "500px"),
+    height: ({ variant }: any) => (variant === "small" ? "" : "500px"),
+    width: ({ variant }: any) => (variant === "small" ? "" : "500px"),
     fontSize: ({ variant }: any) => (variant === "small" ? "" : "32px"),
   },
   ImageTitle: {
@@ -46,7 +48,7 @@ export const useStyles = makeStyles<IStyleProps>(() => ({
     borderRadius: "50%",
   },
   Title: {
-    fontSize: "30px",
+    fontSize: ({ variant }: any) => (variant === "small" ? "30px" : "42px"),
     fontWeight: "bold",
     textDecoration: "underline",
     cursor: ({ variant }: any) => (variant === "small" ? "pointer" : "default"),

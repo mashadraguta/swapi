@@ -8,7 +8,9 @@ export const MainPreloader = () => {
       <div className={styles.Title}>
         STAY TUNED. WE ARE LOADING YOUR FAVORITE CHARACTERS...
       </div>
-      <LinearProgress className={styles.LinearProgress} />
+      <div>
+        <LinearProgress className={styles.LinearProgress} />
+      </div>
     </div>
   );
 };

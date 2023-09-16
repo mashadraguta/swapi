@@ -43,7 +43,6 @@ const initialCharState: personCharacterArray = {
     url: "",
   },
   loading: false,
-  isFetching: false,
   pageNr: 1,
   error: null,
 };
@@ -65,18 +64,12 @@ const charSlice = createSlice({
     setLoading(state, action: PayloadAction<boolean>) {
       state.loading = action.payload;
     },
-    setIsFetching(state, action: PayloadAction<boolean>) {
-      state.isFetching = action.payload;
-    },
     setError(state, action: PayloadAction<string | null>) {
       state.error = action.payload;
     },
     setPage(state, action: PayloadAction<number>) {
       state.pageNr = action.payload;
     },
-    // setTotalCount(state, action: PayloadAction<number>) {
-    //   state.totalCount = action.payload;
-    // },
   },
 });
 

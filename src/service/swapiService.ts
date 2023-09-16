@@ -37,17 +37,5 @@ export const TodoService = {
       throw error;
     }
   },
-  async getMovies(filmUrls: Array<string>) {
-    const moviePromises = filmUrls.map(async (url: string) => {
-      try {
-        const response = await characterApi.get(url);
-        return response.data;
-      } catch (error) {
-        console.error(`Error fetching movies:`, error);
-        throw error;
-      }
-    });
-
-    return Promise.all(moviePromises);
-  },
+ 
 };

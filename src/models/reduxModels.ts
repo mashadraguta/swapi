@@ -43,6 +43,5 @@ export interface personCharacterArray {
   allMovies: Array<movies>;
   error: string | null;
   loading: boolean;
-  isFetching: boolean;
   pageNr: number;
 }

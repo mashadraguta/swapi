@@ -21,7 +21,7 @@ const MainCharacter: React.FC = () => {
   }, [dispatch, name]);
 
   return (
-    <div key={character.name}>
+    <div key={character.name} className={styles.Container}>
       {loading ? (
         <MainPreloader />
       ) : (
@@ -35,7 +35,7 @@ const MainCharacter: React.FC = () => {
             </Link>
             <Link className={styles.Link}>{character.name.toUpperCase()}</Link>
           </Breadcrumbs>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", gap: "20px" }}>
             <div>
               <CharCard
                 name={character.name}
