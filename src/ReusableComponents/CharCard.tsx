@@ -35,7 +35,7 @@ export function CharCard({
 
   return (
     <div className={className}>
-      <div className={styles.root}>
+      <div className={styles.root} role="listitem" title={name} tabIndex={0}>
         <div className={styles.ImageTitle}>
           <div className={styles.Title} onClick={() => onTitleClick?.(name)}>
             {name.toUpperCase()}{" "}

@@ -34,7 +34,11 @@ export const Characters = () => {
           <MainPreloader />
         ) : (
           <React.Fragment>
-            <div className={styles.GridContainer}>
+            <div
+              className={styles.GridContainer}
+              role="list"
+              title="star wars characters"
+            >
               {alltodos.map((char) => (
                 <CharCard
                   onTitleClick={() => handleClick?.(char.name)}
