@@ -1,28 +1,20 @@
 import { makeStyles } from "@mui/styles";
 
-const VARIANTS = {
-  small: "small",
-  large: "large",
-};
-
-export type ICardVariants = keyof typeof VARIANTS;
-export interface IStyleProps {
-  small: string;
-  large: string;
-}
-
-export const useStyles = makeStyles<IStyleProps>(() => ({
-  root: {
+export const useStyles = makeStyles((theme) => ({
+  Root: {
     padding: "15px",
     backgroundColor: "rgba(255,217,102,0.9)",
     "-webkit-box-shadow": "10px 10px 5px 0px rgba(255,255,255,1)",
     "-moz-box-shadow": "10px 10px 5px 0px rgba(255,255,255,1)",
     boxShadow: "10px 10px 5px 0px rgba(255,255,255,1)",
     borderRadius: "10px",
-    minHeight: "300px",
-    minWidth: "300px",
     position: "relative",
     fontSize: "32px",
+    minHeight: "200px",
+    minWidth: "450px",
+    [theme.breakpoints.down("sm")]: {
+      minWidth: "300px",
+    },
     "& ul": {
       listStyleType: "none",
     },

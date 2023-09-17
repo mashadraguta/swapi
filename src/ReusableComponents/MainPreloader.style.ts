@@ -4,11 +4,13 @@ export const useStyles = makeStyles(() => ({
   Container: {
     display: "flex",
     flexDirection: "column",
-    gap: "100px",
+    justifyContent: "center",
+    alignItems: "center",
   },
   Title: {
     color: "#ffffff",
     fontSize: "42px",
+    paddingTop: "60px",
   },
   LinearProgress: {
     "&.MuiLinearProgress-root": {

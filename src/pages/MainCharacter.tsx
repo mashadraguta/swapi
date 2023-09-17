@@ -25,7 +25,7 @@ const MainCharacter: React.FC = () => {
       {loading ? (
         <MainPreloader />
       ) : (
-        <React.Fragment>
+        <div>
           <Breadcrumbs aria-label="breadcrumb" className={styles.Breadcrumbs}>
             <Link
               className={styles.Link}
@@ -35,9 +35,10 @@ const MainCharacter: React.FC = () => {
             </Link>
             <Link className={styles.Link}>{character.name.toUpperCase()}</Link>
           </Breadcrumbs>
-          <div style={{ display: "flex", gap: "20px" }}>
+          <div className={styles.Information}>
             <div>
               <CharCard
+                variant="large"
                 name={character.name}
                 height={character.height}
                 mass={character.mass}
@@ -51,7 +52,7 @@ const MainCharacter: React.FC = () => {
             </div>
             <MovieDetails arrayMovies={character.films} load={loading} />
           </div>
-        </React.Fragment>
+        </div>
       )}
     </div>
   );

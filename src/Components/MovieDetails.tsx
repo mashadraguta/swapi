@@ -19,7 +19,7 @@ export const MovieDetails: React.FC<IMovieDetails> = ({
   const axios = Api();
   const [movieDetails, setMovieDetails] = useState<movies[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const styles = useStyles();
+  const styles = useStyles({isLoading});
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -49,7 +49,7 @@ export const MovieDetails: React.FC<IMovieDetails> = ({
 
   return (
     <div>
-      <div className={styles.root}>
+      <div className={styles.Root}>
         SERIES
         <div>
           {isLoading ? (

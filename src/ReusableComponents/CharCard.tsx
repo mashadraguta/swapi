@@ -14,6 +14,7 @@ interface ICharCard {
   hairColor?: string;
   mass?: string;
   variant?: ICardVariants;
+  className?: string;
 }
 
 export function CharCard({
@@ -28,11 +29,12 @@ export function CharCard({
   hairColor,
   skinColor,
   variant,
+  className,
 }: ICharCard) {
   const styles = useStyles({ variant });
 
   return (
-    <div>
+    <div className={className}>
       <div className={styles.root}>
         <div className={styles.ImageTitle}>
           <div className={styles.Title} onClick={() => onTitleClick?.(name)}>
