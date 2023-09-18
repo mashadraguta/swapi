@@ -35,6 +35,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 .4. Cover more of the app with tests
 
+.5. Refactor existing code
+
 .5. Find another swapi with images for display avatars of each character 
 
 
