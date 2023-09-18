@@ -1,11 +1,10 @@
 import {
   personCharacterArray,
   personCharacter,
-  movies,
 } from "../models/reduxModels";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialCharState: personCharacterArray = {
+export const initialCharState: personCharacterArray = {
   allCharacters: [],
   character: {
     name: "",
@@ -17,15 +16,14 @@ const initialCharState: personCharacterArray = {
     birth_year: "",
     gender: "",
     homeworld: "",
-    films: [],
-    species: [],
-    vehicles: [],
-    starships: [""],
+    films: [] as Array<string>,
+    species: [] as never[],
+    vehicles: [] as never[],
+    starships: [] as never[],
     created: "",
     edited: "",
     url: "",
   },
-  allMovies: [],
   movies: {
     title: "",
     episode_id: 0,
@@ -57,10 +55,6 @@ const charSlice = createSlice({
     setParticularChar(state, action: PayloadAction<personCharacter>) {
       state.character = action.payload;
     },
-    setMovies(state, action: PayloadAction<movies[]>) {
-      state.allMovies = action.payload;
-    },
-
     setLoading(state, action: PayloadAction<boolean>) {
       state.loading = action.payload;
     },

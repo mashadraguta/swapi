@@ -1,8 +1,8 @@
-import Api from "./Api";
+import { Api } from "./API";
 
-const characterApi = Api(); // Create an instance of the API
+const characterApi = Api();
 
-export const TodoService = {
+export const Service = {
   async getAllCharacters() {
     try {
       const response = await characterApi.get("people");
@@ -37,5 +37,4 @@ export const TodoService = {
       throw error;
     }
   },
- 
 };

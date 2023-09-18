@@ -28,12 +28,12 @@ const MainCharacter: React.FC = () => {
         <div>
           <Breadcrumbs aria-label="breadcrumb" className={styles.Breadcrumbs}>
             <Link
-              className={styles.Link}
+              className={styles.LinkBack}
               onClick={() => navigate(`/page/${page}`)}
             >
               back
             </Link>
-            <Link className={styles.Link}>{character.name.toUpperCase()}</Link>
+            <Link   className={styles.LinkTitle}>{character.name.toUpperCase()}</Link>
           </Breadcrumbs>
           <div className={styles.Information}>
             <div>

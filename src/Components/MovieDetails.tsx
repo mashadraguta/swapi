@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { movies } from "../models/reduxModels";
 
-import Api from "../service/Api";
+import { Api } from "../service/API";
 
 import { useStyles } from "./MovieDetails.style";
 
@@ -19,7 +19,7 @@ export const MovieDetails: React.FC<IMovieDetails> = ({
   const axios = Api();
   const [movieDetails, setMovieDetails] = useState<movies[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const styles = useStyles({isLoading});
+  const styles = useStyles({ isLoading });
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,7 +33,7 @@ export const MovieDetails: React.FC<IMovieDetails> = ({
         setMovieDetails(movieDetailsData);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching movie details:", error);
+        console.error("Encountered an error when loading movie details", error);
         setIsLoading(false);
       }
     };

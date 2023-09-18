@@ -11,7 +11,9 @@ export const Characters = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const alltodos = useAppSelector((state) => state.character.allCharacters);
+  const allCharacters = useAppSelector(
+    (state) => state.character.allCharacters
+  );
   const loading = useAppSelector((state) => state.character.loading);
   const pageNr = useAppSelector((state) => state.character.pageNr);
   const [page, setPage] = useState(pageNr);
@@ -39,7 +41,7 @@ export const Characters = () => {
               role="list"
               title="star wars characters"
             >
-              {alltodos.map((char) => (
+              {allCharacters.map((char) => (
                 <CharCard
                   onTitleClick={() => handleClick?.(char.name)}
                   variant="small"

@@ -8,9 +8,11 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     gap: "20px",
   },
-  Link: {
-    color: "white",
-    fontFamily: '"Coda", cursive',
+  LinkBack: {
+    cursor: "pointer",
+  },
+  LinkTitle: {
+    cursor: "default",
   },
   Breadcrumbs: {
     marginBottom: "20px",

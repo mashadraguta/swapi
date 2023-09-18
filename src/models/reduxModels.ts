@@ -9,15 +9,12 @@ export interface personCharacter {
   gender: string;
   homeworld: string;
   films: Array<string>;
-  species: [];
-  vehicles: [];
-  starships: [string];
+  species: never[];
+  vehicles: never[];
+  starships:never[];
   created: string;
   edited: string;
   url: string;
-}
-export interface count {
-  count: number;
 }
 export interface movies {
   title: string;
@@ -40,7 +37,6 @@ export interface personCharacterArray {
   character: personCharacter;
   allCharacters: personCharacter[];
   movies: movies;
-  allMovies: Array<movies>;
   error: string | null;
   loading: boolean;
   pageNr: number;
