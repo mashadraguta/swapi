@@ -1,4 +1,4 @@
-import { Api } from "./API";
+import { Api } from "./service";
 
 const characterApi = Api();
 

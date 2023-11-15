@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { movies } from "../models/reduxModels";
 
-import { Api } from "../service/API";
+import { Api } from "../service/service";
 
 import { useStyles } from "./MovieDetails.style";
 
