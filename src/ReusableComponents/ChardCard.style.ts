@@ -20,7 +20,7 @@ export const useStyles = makeStyles<IStyleProps>(() => ({
     boxShadow: "10px 10px 5px 0px rgba(255,255,255,1)",
     borderRadius: "10px",
     minWidth: ({ variant }: any) => (variant === "large" ? "400px" : ""),
-    fontSize: ({ variant }: any) => (variant === "small" ? "" : "32px"),
+    fontSize: ({ variant }: any) => (variant === "small" ? "" : "33px"),
    
   },
   ImageTitle: {
