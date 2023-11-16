@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles, ICardVariants } from "./ChardCard.style";
-
+import CharImage from './altImg.png'
 interface ICharCard {
   onTitleClick?: (key: string) => any;
   name: string;
@@ -42,7 +42,7 @@ export function CharCard({
           </div>
           {mass ? null : (
             <img
-              src="/img/altImg.png"
+              src={CharImage}
               alt="star wars character"
               className={styles.Image}
             />
