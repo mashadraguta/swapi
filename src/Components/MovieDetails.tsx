@@ -48,15 +48,15 @@ export const MovieDetails: React.FC<IMovieDetails> = ({
   };
 
   return (
-    <div>
-      <div className={styles.Root}>
-        SERIES
+    <div id='movie-details'>
+      <div className={styles.Root} >
+        <p>SERIES</p>
         <div>
           {isLoading ? (
             <LinearProgress className={styles.Preloader} />
           ) : (
             movieDetails.map((movie, index) => (
-              <ul>
+              <ul key={index}>
                 <li key={movie.title}>
                   {++index}. {movie.title}
                 </li>

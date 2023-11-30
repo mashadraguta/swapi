@@ -41,7 +41,7 @@ export const Characters = () => {
               role="list"
               title="star wars characters"
             >
-              {allCharacters.map((char) => (
+              {allCharacters.map((char, index) => (
                 <CharCard
                   onTitleClick={() => handleClick?.(char.name)}
                   variant="small"
@@ -50,6 +50,8 @@ export const Characters = () => {
                   gender={char.gender}
                   numberOfFilms={char.films.length}
                   className={styles.GridItem}
+                  index={index}
+
                 />
               ))}
             </div>

@@ -15,6 +15,8 @@ interface ICharCard {
   mass?: string;
   variant?: ICardVariants;
   className?: string;
+  id?: string;
+  index?: number
 }
 
 export function CharCard({
@@ -30,14 +32,15 @@ export function CharCard({
   skinColor,
   variant,
   className,
+  index
 }: ICharCard) {
   const styles = useStyles({ variant });
 
   return (
     <div className={className}>
-      <div className={styles.root} role="listitem" title={name} tabIndex={0}>
+      <div className={styles.root} role="listitem" title={name} tabIndex={0} id='character'>
         <div className={styles.ImageTitle}>
-          <div className={styles.Title} onClick={() => onTitleClick?.(name)}>
+          <div className={styles.Title} onClick={() => onTitleClick?.(name)} id='title-toggle-click'>
             {name.toUpperCase()}{" "}
           </div>
           {mass ? null : (
